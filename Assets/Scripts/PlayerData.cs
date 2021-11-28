@@ -7,5 +7,11 @@ using System;
 public class PlayerData 
 {
     public string playerName;
-    public int level;
+    public int score;
+
+    PlayerData(string playerName,int score)
+    {
+        playerName = this.playerName;
+        score = this.score;
+    }
 }

@@ -6,10 +6,9 @@ using UnityEngine.UI;
 
 public class StartSceneMenu : MonoBehaviour
 {
-    public InputField nameIF;
-    string name;
     public Text nameTxt;
-   public void StartButton()
+
+    public void StartButton()
     {
         SceneManager.LoadScene(1);
     }
@@ -19,6 +18,6 @@ public class StartSceneMenu : MonoBehaviour
     }
     private void OnDestroy()
     {
-        DataPersistance.inst.SavePlayerName(nameTxt.text);
+        DataPersistance.inst.currentPLayerName = nameTxt.text;
     }
 }
